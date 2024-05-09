@@ -4,6 +4,7 @@ class Agenda:
     __shows: Show  = []
     
     def __init__(self):
+        self.__shows = []
         pass
 
     def createShow(self, show):
@@ -17,3 +18,6 @@ class Agenda:
 
     def deleteShow(self, index):
         self.__shows.pop(index)
+        
+    def clearShows(self):
+        self.__shows = []
