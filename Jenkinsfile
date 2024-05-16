@@ -8,7 +8,7 @@ pipeline {
 
             steps {
                 echo 'Building...'
-                sh "python3.12 src/inde.py"
+                sh "python3.12 src/index.py"
             }
 
         }
