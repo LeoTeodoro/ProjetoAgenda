@@ -13,6 +13,14 @@ pipeline {
 
         }
 
+         stage('Test'){
+
+            steps {
+                echo 'Testing...'
+                sh "python3.12 src/agendaTest.py"
+            }
+
+        }
     }
 
 }
