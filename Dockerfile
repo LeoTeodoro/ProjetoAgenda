@@ -7,3 +7,6 @@ USER root
 # Executa comandos para instalar o python
 RUN apt-get update && \
     apt-get install -y python3 python3-pip
+
+# Volte para o usuário do Jenkins
+USER jenkins
