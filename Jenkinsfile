@@ -8,7 +8,7 @@ pipeline {
 
             steps {
                 echo 'Building...'
-                sh "python3.12 src/index.py"
+                sh "python3 src/index.py"
             }
 
         }
@@ -17,7 +17,7 @@ pipeline {
 
             steps {
                 echo 'Testing...'
-                sh "python3.12 src/agendaTest.py"
+                sh "python3 src/agendaTest.py"
             }
 
         }
