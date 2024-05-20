@@ -9,7 +9,6 @@ RUN apt-get update && \
     apt-get install -y python3 python3-pip
 
 # Instalando mailutils
-RUN apt-get update && \
-    apt-get install -y mailutils
+RUN apt-get install -y mailutils
 
 USER jenkins
