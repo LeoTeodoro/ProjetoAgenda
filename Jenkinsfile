@@ -21,6 +21,17 @@ pipeline {
             }
 
         }
+        stage('Notification'){
+
+            steps {
+                echo 'Notification...'
+                sh '''
+                   cd src
+                   sudo apt-get install mailutils
+                   mail -s "email enviado" gabriel.leal@gec.inatel.br
+            }
+
+        }
     }
 
 }
