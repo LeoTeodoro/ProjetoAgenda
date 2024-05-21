@@ -17,8 +17,12 @@ pipeline {
 
             steps {
                 echo 'Testing...'
-                sh "python3 src/agendaTest.py"
-                archiveArtifacts 'htmlcov/index.html'
+                sh '''
+                    pip install coverage
+                    python -m coverage run src/agendaTest.py
+                    python -m coverage report
+                    python -m coverage html
+                '''
             }
 
         }
