@@ -26,7 +26,8 @@ pipeline {
                 script {
                     echo 'Testing...'
                     sh '''
-                        pipenv run coverage run -m unittest discover -s src/agendaTest.py
+                        cd src
+                        pipenv run coverage run -m unittest agendaTest.py 
                         pipenv run coverage html
                     '''
                 }
