@@ -8,8 +8,6 @@ pipeline {
 
             steps {
                 echo 'Building...'
-                sh 'apt update && apt install -y python3 python3-pip'
-                sh 'pip3 install coverage'
                 sh 'python src/index.py'
             }
 
