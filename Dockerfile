@@ -1,12 +1,16 @@
 # Define nossa imagem base
 FROM jenkins/jenkins:lts
 
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Define nosso usuario dentro do container
 USER root
 
 # Executa comandos para instalar o python
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip
+    apt-get install -y python3 python3-pip && \
+    ln -s /usr/bin/python3 /usr/bin/python && \
+    pip3 install --upgrade pip
 
 RUN pip install pipenv
 
@@ -14,3 +18,7 @@ RUN pip install pipenv
 RUN apt-get install -y mailutils
 
 USER jenkins
+
+EXPOSE 8080
+
+CMD ["jenkins"]
