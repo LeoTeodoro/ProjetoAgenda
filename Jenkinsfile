@@ -31,14 +31,6 @@ pipeline {
                         pipenv run coverage html
                     '''
                 }
-                publishHTML target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'htmlcov',
-                    reportFiles: 'index.html',
-                    reportName: 'Coverage Report'
-                ]
             }
         }
         // stage('Notification'){
