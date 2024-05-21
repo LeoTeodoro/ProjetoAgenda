@@ -18,6 +18,7 @@ pipeline {
             steps {
                 echo 'Testing...'
                 sh "python3 src/agendaTest.py"
+                archiveArtifacts 'htmlcov/index.html'
             }
 
         }
