@@ -8,7 +8,7 @@ pipeline {
 
             steps {
                 echo 'Building...'
-                sh 'python src/index.py'
+                sh 'python3 src/index.py'
             }
 
         }
@@ -18,9 +18,9 @@ pipeline {
             steps {
                 echo 'Testing...'
                 sh '''
-                    python -m coverage run src/agendaTest.py
-                    python -m coverage report
-                    python -m coverage html
+                    python3 -m coverage run src/agendaTest.py
+                    python3 -m coverage report
+                    python3 -m coverage html
                 '''
             }
 
