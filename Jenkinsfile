@@ -20,10 +20,9 @@ pipeline {
             steps {
                 echo 'Testing...'
                 sh '''
-                    pipenv install
-                    python3 -m coverage run src/agendaTest.py
-                    python3 -m coverage report
-                    python3 -m coverage html
+                    coverage run src/agendaTest.py
+                    coverage report
+                    coverage html
                 '''
             }
 
