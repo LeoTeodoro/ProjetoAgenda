@@ -10,7 +10,9 @@ USER root
 RUN apt-get update && \
     apt-get install -y python3 python3-pip && \
     ln -s /usr/bin/python3 /usr/bin/python && \
-    pip3 install --upgrade pip
+    pip3 install --upgrade pip && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN pip install pipenv
 
@@ -21,4 +23,4 @@ USER jenkins
 
 EXPOSE 8080
 
-CMD ["jenkins"]
+CMD ["java", "-jar", "/usr/share/jenkins/jenkins.war"]
