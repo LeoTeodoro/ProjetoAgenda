@@ -13,8 +13,8 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh '''
-                    pipenv install --dev
-                    python3 src/index.py
+                    pipenv coverage install --dev
+                    pipenv run coverage html
                 '''
             }
 
