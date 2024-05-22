@@ -33,20 +33,16 @@ pipeline {
                 }
             }
         }
-        // stage('Notification'){
+        stage('Notification'){
 
-        //     steps {
-        //         script {
-        //             echo 'Notification'
-        //             emailext body: '''<p>Relatório de testes gerado pelo Jenkins.</p>
-        //                             <p>Veja o relatório de cobertura de testes no link a seguir:</p>
-        //                             <p><a href="${BUILD_URL}htmlcov/index.html">Relatório de Cobertura</a></p>''',
-        //                      subject: "Relatório de Testes - Build #${BUILD_NUMBER}",
-        //                      to: 'gabriel.leal@gec.inatel.br',
-        //                      mimeType: 'text/html'
-        //         }
-        //     }
-        // }
+            steps {
+                echo 'Notification...'
+                sh '''
+                   cd src
+                   mail -s "email enviado" gabriel.leal@gec.inatel.br
+                   '''
+            }
+        }
     }
 
 }
