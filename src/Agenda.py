@@ -1,4 +1,4 @@
-import Show
+from show import Show
 
 class Agenda:
     __shows: Show  = []
@@ -21,3 +21,9 @@ class Agenda:
         
     def clearShows(self):
         self.__shows = []
+
+    def mostrar_valor_show(self, index):
+        if 0 <= index < len(self.__shows):
+            return self.__shows[index].mostrar_valor()
+        else:
+            return "Índice inválido."

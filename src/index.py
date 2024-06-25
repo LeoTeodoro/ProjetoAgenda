@@ -1,5 +1,5 @@
-from Agenda import Agenda
-from Show import Show
+from agenda import Agenda
+from show import Show
 
 def main():
     agenda = Agenda()
@@ -24,3 +24,5 @@ def main():
         
 if __name__ == "__main__":
     main()
+
+    #aaaa

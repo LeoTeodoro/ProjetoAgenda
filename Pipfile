@@ -7,6 +7,7 @@ name = "pypi"
 coverage = "*"
 
 [dev-packages]
+coverage = "*"
 
 [requires]
-python_version = "3.*"
+python_version = "3.12.3"

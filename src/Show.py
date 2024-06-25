@@ -10,3 +10,6 @@ class Show:
         return f"Show(local={self.__local}, horario={self.__horario}, " \
                f"data={self.__data}, Nome do contratante={self.__nomeContratante}, " \
                f"valor={self.__valor})"
+    
+    def mostrar_valor(self):
+        return self.__valor
