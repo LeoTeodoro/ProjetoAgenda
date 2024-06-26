@@ -1,4 +1,4 @@
-from show import Show
+from Show import Show
 
 class Agenda:
     __shows: Show  = []

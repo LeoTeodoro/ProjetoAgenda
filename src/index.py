@@ -1,5 +1,5 @@
-from agenda import Agenda
-from show import Show
+from Agenda import Agenda
+from Show import Show
 
 def main():
     agenda = Agenda()
